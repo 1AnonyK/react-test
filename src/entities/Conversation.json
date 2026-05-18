@@ -1,0 +1,40 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Conversation title (auto-generated from first message)"
+    },
+    "language": {
+      "type": "string",
+      "description": "Active language code",
+      "default": "English"
+    },
+    "register": {
+      "type": "string",
+      "enum": [
+        "formal",
+        "neutral",
+        "casual",
+        "slang"
+      ],
+      "default": "neutral"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Rolling AI-generated summary (~4KB max)"
+    },
+    "message_count": {
+      "type": "number",
+      "default": 0
+    },
+    "last_message_at": {
+      "type": "string",
+      "description": "ISO timestamp of last message"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

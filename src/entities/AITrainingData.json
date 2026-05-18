@@ -1,0 +1,44 @@
+{
+  "name": "AITrainingData",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "correction",
+        "phrase",
+        "slang",
+        "source"
+      ]
+    },
+    "language": {
+      "type": "string"
+    },
+    "original": {
+      "type": "string"
+    },
+    "correction": {
+      "type": "string"
+    },
+    "context": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "source_content": {
+      "type": "string"
+    },
+    "submitted_by": {
+      "type": "string"
+    },
+    "approved": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "type",
+    "language"
+  ]
+}
